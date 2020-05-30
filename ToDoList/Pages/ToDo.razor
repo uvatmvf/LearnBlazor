@@ -58,6 +58,13 @@
         {
             todos.Add(new TodoItem() { Title = newTodo });
             newTodo = string.Empty;
+            InvokeAsync(() => StateHasChanged());            
         }
+    }
+
+    public void AddTodo(string todo)
+    {
+        newTodo = todo;
+        AddTodo();
     }
 }

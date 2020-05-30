@@ -1,0 +1,31 @@
+﻿@page "/autoTodo"
+@inject NotifierService Notifier
+@inject TodoGenerator AutomatedTaskMaster
+@implements IDisposable
+
+<ToDo @ref="myTodo" />
+
+<h3>AutoTodo</h3>
+
+@code {      
+    protected override void OnInitialized()
+    {
+        Notifier.Notify += OnNotify;
+    }
+
+    private ToDo myTodo;
+
+    public async Task OnNotify(string key, int value)
+    {
+        await InvokeAsync(() =>
+        {
+            myTodo.AddTodo(Guid.NewGuid().ToString());
+            StateHasChanged();
+        });
+    }
+
+    public void Dispose()
+    {
+        Notifier.Notify -= OnNotify;
+    }
+}

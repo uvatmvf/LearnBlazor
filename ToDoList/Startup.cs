@@ -28,10 +28,13 @@ namespace ToDoList
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-
-            // TODO add more dependencies here to DI container
+            
             // This ties back to the '@Inject' keyword in the BLAZOR component pages.
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<NotifierService>();
+            services.AddSingleton((services) => new TodoGenerator(services));
+
+            // TODO add more dependencies here to DI container
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
