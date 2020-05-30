@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+*.cs
+*.CopyComplete
+*.pdb
+*.dll
+*.exe
+*.cache
+/ToDoList/bin/Debug/netcoreapp3.1
+/ToDoList/obj/Debug/netcoreapp3.1/staticwebassets
+/ToDoList/obj/Debug/netcoreapp3.1/ToDoList.csproj.FileListAbsolute.txt
