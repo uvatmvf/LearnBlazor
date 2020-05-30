@@ -1,7 +1,12 @@
 ﻿@page "/fetchdata"
 
 @using ToDoList.Data
+
+<!-- If (Server Blazor App) -->
 @inject WeatherForecastService ForecastService
+<!-- Else If (WebAssembly App) -->
+<!--at inject HttpClient Http -->
+
 
 <h1>Weather forecast</h1>
 
@@ -41,6 +46,9 @@ else
 
     protected override async Task OnInitializedAsync()
     {
+        // If (Server App)
         forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+        // Else If (WebAssembly App)
+        // forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
     }
 }

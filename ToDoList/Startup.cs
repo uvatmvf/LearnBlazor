@@ -28,6 +28,9 @@ namespace ToDoList
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            // TODO add more dependencies here to DI container
+            // This ties back to the '@Inject' keyword in the BLAZOR component pages.
             services.AddSingleton<WeatherForecastService>();
         }
 
