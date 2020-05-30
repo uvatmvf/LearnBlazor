@@ -11,6 +11,9 @@
 <input id="useAttributesDict" @attributes="InputAttributes" />
 
 @code {
+    // The use case for splatting is when there are many knobs to turn on a component.    
+
+    // Doing this with properties is yuck!
     [Parameter]
     public string MaxLength { get; set; } = "10";
 
@@ -23,6 +26,7 @@
     [Parameter]
     public string Size { get; set; } = "50";
 
+    // Better: Attribute Splatting
     public Dictionary<string, object> InputAttributes { get; set; } =
         new Dictionary<string, object>()
         { 
