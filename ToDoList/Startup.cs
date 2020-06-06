@@ -32,7 +32,7 @@ namespace ToDoList
             // This ties back to the '@Inject' keyword in the BLAZOR component pages.
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<NotifierService>();
-            services.AddSingleton((services) => new TodoGenerator(services));
+            services.AddSingleton<TodoGenerator>();
 
             // TODO add more dependencies here to DI container
         }
