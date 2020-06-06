@@ -10,3 +10,5 @@
 /ToDoList/bin/Debug/netcoreapp3.1
 /ToDoList/obj/Debug/netcoreapp3.1/staticwebassets
 /ToDoList/obj/Debug/netcoreapp3.1/ToDoList.csproj.FileListAbsolute.txt
+/MVCWebApplication/obj
+/MVCWebApplication/bin/Debug/netcoreapp3.1
