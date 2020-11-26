@@ -1,2 +1,4 @@
 # LearnBlazor
-This is a sandbox for learning Blazor
+Demonstrate basic Blazor functionality.
+
+Go Web Assembly!
