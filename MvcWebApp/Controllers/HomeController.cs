@@ -14,6 +14,8 @@ namespace MvcWebApp.Controllers
             _logger = logger;
         }
 
+        public IActionResult Host() => View("_Host");
+
         public IActionResult Index()
         {
             return View(new PersonViewModel() { FirstName = "Frank" });

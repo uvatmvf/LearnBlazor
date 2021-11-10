@@ -6,6 +6,5 @@
 
   <ItemGroup>
     <PackageReference Include="MudBlazor" Version="5.2.0" />
-    <RazorComponentInclude>Views\Shared\**\*.cshtml</RazorComponentInclude>
   </ItemGroup>  
 </Project>
