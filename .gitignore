@@ -12,3 +12,5 @@
 /ToDoList/obj/Debug/netcoreapp3.1/ToDoList.csproj.FileListAbsolute.txt
 /MVCWebApplication/obj
 /MVCWebApplication/bin/Debug/netcoreapp3.1
+/.vs/LearnBlazorMvc
+/MvcWebApp/bin/Debug/net5.0
