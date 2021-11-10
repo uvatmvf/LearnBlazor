@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MVCWebApplication.Models;
+using MvcWebApp.Models;
+using System.Diagnostics;
 
-namespace MVCWebApplication.Controllers
+namespace MvcWebApp.Controllers
 {
     public class HomeController : Controller
     {
@@ -20,7 +16,7 @@ namespace MVCWebApplication.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(new PersonViewModel() { FirstName = "Frank" });
         }
 
         public IActionResult Privacy()
