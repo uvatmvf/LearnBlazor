@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "29439762-2f42-4769-a63e-3693220b5c51": {
+      "ProjectGuid": "29439762-2f42-4769-a63e-3693220b5c51",
+      "DisplayName": "MVCWebApplication",
+      "ColorIndex": 0
+    },
+    "f59faae8-5014-40c3-85d4-4ea228bafdb2": {
+      "ProjectGuid": "f59faae8-5014-40c3-85d4-4ea228bafdb2",
+      "DisplayName": "ToDoList",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -1,0 +1,61 @@
+﻿@page "/splat"
+    <div extra="23" @attributes="AdditionalAttributes" />
+    <h3>Splat and Unmatched Attributes Example</h3>
+<input id="useIndividualParams"
+       maxlength="@MaxLength"
+       placeholder="@Placeholder"
+       required="@Required"
+       size="@Size" />
+
+<input id="useAttributesDict" @attributes="InputAttributes" />
+
+<ToDo @ref="myTodo" />
+
+@code {
+        // The use case for splatting is when there are many knobs to turn on a component.    
+
+        // Doing this with properties is yuck!
+        [Parameter]
+        public string MaxLength { get; set; } = "10";
+
+    private ToDo myTodo;
+
+    [Parameter]
+    public string Placeholder { get; set; } = "Input placeholder text";
+
+    [Parameter]
+    public string Required { get; set; } = "required";
+
+    [Parameter]
+    public string Size { get; set; } = "50";
+
+    // Better: Attribute Splatting
+    public Dictionary<string, object> InputAttributes { get; set; } =
+        new Dictionary<string, object>()
+        {
+            { "maxlength", "10" },
+            { "placeholder", "Input placeholder text" },
+            { "required", "required" },
+            { "size", "50" },
+        };
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> AdditionalAttributes { get; set; } =
+        new Dictionary<string, object>();
+
+    protected override Task OnAfterRenderAsync(bool firstRender)
+    {        
+        return base.OnAfterRenderAsync(firstRender)
+        .ContinueWith(t =>
+        {
+        if (firstRender)
+        {
+            InvokeAsync(() =>
+            {
+                myTodo.AddTodo("Foo Bar Foo");
+                StateHasChanged();
+            });
+            }
+        });
+    }
+}

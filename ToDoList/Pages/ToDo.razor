@@ -1,0 +1,70 @@
+﻿@page "/todo"
+<!--
+    The 'Page' directive at the top of the Counter.razor file specifies that the Counter component is a routing endpoint (through SINGLR circuits).
+    The Counter component handles requests sent to /counter.
+    Without the 'Page' directive, a component doesn't handle routed requests, but the component can still be used by other components.
+    https://docs.microsoft.com/en-us/aspnet/core/tutorials/build-your-first-blazor-app?view=aspnetcore-3.1
+    See related NavLink.
+
+    NOTES:
+    1. A component's name must start with an uppercase character.
+    For example, MyCoolComponent.razor is valid, and myCoolComponent.razor is invalid.
+    https://docs.microsoft.com/en-us/aspnet/core/blazor/components?view=aspnetcore-3.1
+
+    2. Tag Helpers aren't supported in Razor components (.razor files).
+
+    3. Route parameters are opened with multiple 'At Page' directives in the component.
+    E.g. "/Foo", "/Foo/{bar}" <- There should be a public property in the 'at Code' section named 'Bar'
+    Catch-all parameter syntax (*/**), which captures the path across multiple folder boundaries,
+    is not supported in Razor components (.razor).
+
+    4. Component parameters are defined using public properties on the component class with the 'Parameter' attribute.
+    NOTE: Component Parameters SHOULD ONLY BE USED TO INTERFACE COMPONENTS!
+    A component should not reference its own Component parameters. Use private fields when a component is talking to itself.
+
+    5. Use 'ChildContent' RenderFragment property convention in a component to create a IOC Gui.
+    e.g. Create a dialog Component whose caller can specify the content of the dialog.
+    One could inject any control from simple text to other Components in the dialog:
+
+        <h1>Parent-child example</h1>
+        <ChildComponent Title="Panel Title from Parent">
+            Content of the child component is supplied
+            by the parent component.
+            <button>Close me!</button>
+        </ChildComponent>
+-->
+<h3>ToDo (@todos.Count(todo => !todo.IsDone))</h3>
+
+<ul>
+    @foreach (var todo in todos)
+    {
+        <li>
+            <input type="checkbox" @bind="todo.IsDone" />
+            <input @bind="todo.Title" />
+        </li>
+    }
+</ul>
+
+<input placeholder="Something todo" @bind="newTodo" />
+<button @onclick="AddTodo">Add todo</button>
+
+@code {
+    private IList<TodoItem> todos = new List<TodoItem>();
+    private string newTodo;
+
+    private void AddTodo()
+    {
+        if (!string.IsNullOrWhiteSpace(newTodo))
+        {
+            todos.Add(new TodoItem() { Title = newTodo });
+            newTodo = string.Empty;
+            InvokeAsync(() => StateHasChanged());            
+        }
+    }
+
+    public void AddTodo(string todo)
+    {
+        newTodo = todo;
+        AddTodo();
+    }
+}
