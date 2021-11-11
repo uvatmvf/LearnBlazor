@@ -14,3 +14,6 @@
 /MVCWebApplication/bin/Debug/netcoreapp3.1
 /.vs/LearnBlazorMvc
 /MvcWebApp/bin/Debug/net5.0
+/MvcWebApp/obj
+/ToDoList/bin/Debug/net5.0
+/ToDoList/obj
