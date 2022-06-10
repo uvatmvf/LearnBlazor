@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{62E80FF6-67D
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C500ED13-A183-4119-860F-918C38592948}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorComponent.Tests", "BlazorComponent.Tests\BlazorComponent.Tests.csproj", "{7AA2983B-FC80-4E05-9115-0EB5EB5942D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorComponent.UnitTests", "BlazorComponent.Tests\BlazorComponent.UnitTests.csproj", "{7AA2983B-FC80-4E05-9115-0EB5EB5942D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
