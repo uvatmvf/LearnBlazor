@@ -1,4 +1,4 @@
-# LearnBlazor
+# Learn Blazor
 This is a sandbox for learning Blazor
 
 MVC app demonstrates how to serve Blazor components in cshtml razor pages through MVC routing.
