@@ -18,3 +18,8 @@
 /ToDoList/bin/Debug/net5.0
 /ToDoList/obj
 /BlazorComponent.Tests/obj
+/BlazorComponent.Tests/bin/Debug/net6.0
+/MvcWebApp/bin/Debug/net6.0
+/SpecFlowProject/bin/Debug/net6.0
+/SpecFlowProject/obj
+/.vs/ProjectEvaluation

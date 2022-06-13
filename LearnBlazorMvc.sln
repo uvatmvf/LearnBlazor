@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{C500ED13-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorComponent.UnitTests", "BlazorComponent.Tests\BlazorComponent.UnitTests.csproj", "{7AA2983B-FC80-4E05-9115-0EB5EB5942D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowProject", "SpecFlowProject\SpecFlowProject.csproj", "{3AEACFFE-6B95-4587-8615-EA15B5123E1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{7AA2983B-FC80-4E05-9115-0EB5EB5942D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA2983B-FC80-4E05-9115-0EB5EB5942D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA2983B-FC80-4E05-9115-0EB5EB5942D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AEACFFE-6B95-4587-8615-EA15B5123E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AEACFFE-6B95-4587-8615-EA15B5123E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AEACFFE-6B95-4587-8615-EA15B5123E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AEACFFE-6B95-4587-8615-EA15B5123E1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{F59FAAE8-5014-40C3-85D4-4EA228BAFDB2} = {62E80FF6-67D6-4B2B-8C54-12E370A71045}
 		{E79FA39D-0AE2-4681-A7F3-60534F2CCDF3} = {62E80FF6-67D6-4B2B-8C54-12E370A71045}
 		{7AA2983B-FC80-4E05-9115-0EB5EB5942D9} = {C500ED13-A183-4119-860F-918C38592948}
+		{3AEACFFE-6B95-4587-8615-EA15B5123E1A} = {C500ED13-A183-4119-860F-918C38592948}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {82A4BD74-610A-4E5F-9FE4-FD48FA84220D}
