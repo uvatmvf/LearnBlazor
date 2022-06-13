@@ -14,9 +14,16 @@ namespace SpecFlowProject.PageObjects
 
         private IWebElement RandomNameButton => _browserInteractions.WaitAndReturnElement(By.Id("randomName"));
 
+        private IWebElement NameLabel => _browserInteractions.WaitAndReturnElement(By.Id("HelloLabel"));
+
         private readonly IBrowserInteractions _browserInteractions;
         public PersonPage(IBrowserInteractions browserInteractions) =>
             _browserInteractions = browserInteractions;
+
+        internal string CheckName()
+        {
+            return NameLabel.Text;
+        }
 
         public void Goto() => _browserInteractions.GoToUrl(PageUrl);
 
