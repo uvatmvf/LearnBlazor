@@ -29,5 +29,9 @@ namespace SpecFlowProject.StepDefinitions
         [Then(@"the person name changes")]
         public void ThenThePersonNameChanges() =>
             Assert.NotEmpty(_personPage.CheckName());
+        public void ThenThePersonNameChanges()
+        {
+            
+        }
     }
 }
