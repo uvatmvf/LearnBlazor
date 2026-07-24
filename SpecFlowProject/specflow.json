@@ -1,0 +1,15 @@
+{
+  "specFlow": {
+    "bindingCulture": { "name": "en-US" }
+  },
+  "Selenium": {
+    "Browser": "Chrome",
+    "Headless": true,
+    "Arguments": [
+      "--no-sandbox",
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--window-size=1920,1080"
+    ]
+  }
+}
