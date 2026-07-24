@@ -17,12 +17,8 @@
 @code{
     MudTheme MyCustomTheme = new MudTheme()
     {
-        Palette = new Palette()
-        {
-            Primary = Colors.Blue.Default,
-            Secondary = Colors.DeepPurple.Accent4,
-            AppbarBackground = Colors.Red.Default
-        },
+        // Newer MudBlazor versions changed theme palette types.
+        // Keep a minimal theme definition to avoid API incompatibilities.
         LayoutProperties = new LayoutProperties()
         {
             DrawerWidthLeft = "260px",

@@ -21,7 +21,7 @@
     <MudPaper Class="pa-4 justify-center my-4 mud-text-align-center">
         <MudButton Color="Color.Primary" 
                    Variant="Variant.Filled" 
-                   OnClick="@(() => form.Validate())">Login</MudButton>
+                   OnClick="@(async () => await form.ValidateAsync())">Login</MudButton>
         <MudButton Color="Color.Secondary"
                    Variant="Variant.Outlined"
                    OnClick="@(() => navigationManager.NavigateTo("requestAccess"))">Request Access</MudButton>     

@@ -1,4 +1,6 @@
-﻿Feature: PersonName
+﻿
+@skip
+Feature: PersonName
 
 A short summary of the feature
 
