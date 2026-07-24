@@ -16,10 +16,13 @@ namespace ToDoList
             _timer.Start();
         }
 
-        private void Timer_Elapsed(object sender, ElapsedEventArgs e)
+        private async void Timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             var todo = (NotifierService)_serviceProvider.GetService(typeof(NotifierService));
-            todo.Update(string.Empty, 0);
+            if (todo != null)
+            {
+                await todo.Update(string.Empty, 0);
+            }
         }
 
         public void Dispose()

@@ -1,0 +1,486 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-07-24T15:14:24.5240508Z",
+  "analysisEndTime": "2026-07-24T15:14:27.257057Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 4,
+      "issues": 4,
+      "incidents": 12,
+      "effort": 12
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 4,
+        "Optional": 5,
+        "Potential": 3,
+        "Information": 0
+      },
+      "category": {
+        "Project": 4,
+        "Api": 2,
+        "NuGet": 6
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "TodoList\\BlazorApp.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "BlazorApp",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 35,
+        "numberOfCodeFiles": 8,
+        "linesTotal": 2474,
+        "linesOfCode": 220,
+        "totalApiScanned": 1269,
+        "minLinesOfCodeToChange": 1,
+        "maxLinesOfCodeToChange": 1
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "e8e594a2-7e7e-4cd2-b542-090ba206f93c",
+          "ruleId": "Project.0002",
+          "projectPath": "TodoList\\BlazorApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "TodoList\\BlazorApp.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "a6afbe0f-962e-437a-9234-da966ec8c84c",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "TodoList\\BlazorApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/Error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "TodoList\\Startup.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/Error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 48,
+            "column": 16
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "BlazorComponent.Tests\\BlazorComponent.UnitTests.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "BlazorComponent.UnitTests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 5,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 1964,
+        "linesOfCode": 18,
+        "totalApiScanned": 13,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "6c859fb0-38e2-4724-a238-0b7ff18a0eac",
+          "ruleId": "NuGet.0005",
+          "projectPath": "BlazorComponent.Tests\\BlazorComponent.UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "BlazorComponent.Tests\\BlazorComponent.UnitTests.csproj",
+            "snippet": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.4.1",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.4.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1a11398f-6e8a-443c-8491-49fdb53859c4",
+          "ruleId": "Project.0002",
+          "projectPath": "BlazorComponent.Tests\\BlazorComponent.UnitTests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "BlazorComponent.Tests\\BlazorComponent.UnitTests.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "MvcWebApp\\MvcWebApp.csproj",
+      "startingProject": true,
+      "issues": 2,
+      "storyPoints": 2,
+      "properties": {
+        "appName": "MvcWebApp",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 23,
+        "numberOfCodeFiles": 13,
+        "linesTotal": 461,
+        "linesOfCode": 252,
+        "totalApiScanned": 1811,
+        "minLinesOfCodeToChange": 1,
+        "maxLinesOfCodeToChange": 1
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "b5277f47-36d6-4c94-bfd3-368660b95195",
+          "ruleId": "Project.0002",
+          "projectPath": "MvcWebApp\\MvcWebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MvcWebApp\\MvcWebApp.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "11d2f214-07e7-4ecb-8140-01b33cd8e144",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Exception diagnostics are suppressed when IExceptionHandler.TryHandleAsync returns true ",
+          "projectPath": "MvcWebApp\\MvcWebApp.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "app.UseExceptionHandler(\u0022/Home/Error\u0022);",
+              "protected": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)"
+            },
+            "kind": "File",
+            "path": "MvcWebApp\\Startup.cs",
+            "snippet": "app.UseExceptionHandler(\u0022/Home/Error\u0022);",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "label": "M:Microsoft.AspNetCore.Builder.ExceptionHandlerExtensions.UseExceptionHandler(Microsoft.AspNetCore.Builder.IApplicationBuilder,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/aspnet-core/10/exception-handler-diagnostics-suppressed.md",
+                "isCustom": false
+              }
+            ],
+            "line": 35,
+            "column": 16
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "SpecFlowProject\\SpecFlowProject.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 6,
+      "properties": {
+        "appName": "SpecFlowProject",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net6.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 11,
+        "numberOfCodeFiles": 8,
+        "linesTotal": 2372,
+        "linesOfCode": 426,
+        "totalApiScanned": 346,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "0e3beff2-ed1f-4153-9a33-941407412579",
+          "ruleId": "NuGet.0002",
+          "projectPath": "SpecFlowProject\\SpecFlowProject.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.10",
+              "protected": "Microsoft.Extensions.Hosting.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.10"
+            },
+            "kind": "File",
+            "path": "SpecFlowProject\\SpecFlowProject.csproj",
+            "snippet": "Microsoft.Extensions.Hosting.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.10",
+            "protectedSnippet": "Microsoft.Extensions.Hosting.Abstractions, 6.0.0\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting.Abstractions, and replace with new package Microsoft.Extensions.Hosting.Abstractions 10.0.10",
+            "label": "Microsoft.Extensions.Hosting.Abstractions 6.0.0",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting.Abstractions",
+              "PackageVersion": "6.0.0",
+              "PackageNewVersion": "10.0.10",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "4ad42834-4fca-4180-aee6-290c58a2fb71",
+          "ruleId": "NuGet.0005",
+          "projectPath": "SpecFlowProject\\SpecFlowProject.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "SpecFlow.Actions.Selenium, 0.1.332\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Actions.Selenium, and replace with new package SpecFlow.Actions.Selenium, 0.1.332",
+              "protected": "SpecFlow.Actions.Selenium, 0.1.332\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Actions.Selenium, and replace with new package SpecFlow.Actions.Selenium, 0.1.332"
+            },
+            "kind": "File",
+            "path": "SpecFlowProject\\SpecFlowProject.csproj",
+            "snippet": "SpecFlow.Actions.Selenium, 0.1.332\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Actions.Selenium, and replace with new package SpecFlow.Actions.Selenium, 0.1.332",
+            "protectedSnippet": "SpecFlow.Actions.Selenium, 0.1.332\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Actions.Selenium, and replace with new package SpecFlow.Actions.Selenium, 0.1.332",
+            "label": "SpecFlow.Actions.Selenium 0.1.332",
+            "properties": {
+              "PackageId": "SpecFlow.Actions.Selenium",
+              "PackageVersion": "0.1.332",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "69280007-7c97-4365-a6b4-0f6e40a7be35",
+          "ruleId": "NuGet.0005",
+          "projectPath": "SpecFlowProject\\SpecFlowProject.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "SpecFlow.Plus.LivingDocPlugin, 3.9.57\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Plus.LivingDocPlugin, and replace with new package SpecFlow.Plus.LivingDocPlugin, 3.9.57",
+              "protected": "SpecFlow.Plus.LivingDocPlugin, 3.9.57\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Plus.LivingDocPlugin, and replace with new package SpecFlow.Plus.LivingDocPlugin, 3.9.57"
+            },
+            "kind": "File",
+            "path": "SpecFlowProject\\SpecFlowProject.csproj",
+            "snippet": "SpecFlow.Plus.LivingDocPlugin, 3.9.57\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Plus.LivingDocPlugin, and replace with new package SpecFlow.Plus.LivingDocPlugin, 3.9.57",
+            "protectedSnippet": "SpecFlow.Plus.LivingDocPlugin, 3.9.57\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.Plus.LivingDocPlugin, and replace with new package SpecFlow.Plus.LivingDocPlugin, 3.9.57",
+            "label": "SpecFlow.Plus.LivingDocPlugin 3.9.57",
+            "properties": {
+              "PackageId": "SpecFlow.Plus.LivingDocPlugin",
+              "PackageVersion": "3.9.57",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "cf59c954-0de5-4fbb-9ffe-2d7301d13010",
+          "ruleId": "NuGet.0005",
+          "projectPath": "SpecFlowProject\\SpecFlowProject.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "SpecFlow.xUnit, 3.9.74\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.xUnit, and replace with new package SpecFlow.xUnit, 3.9.74",
+              "protected": "SpecFlow.xUnit, 3.9.74\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.xUnit, and replace with new package SpecFlow.xUnit, 3.9.74"
+            },
+            "kind": "File",
+            "path": "SpecFlowProject\\SpecFlowProject.csproj",
+            "snippet": "SpecFlow.xUnit, 3.9.74\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.xUnit, and replace with new package SpecFlow.xUnit, 3.9.74",
+            "protectedSnippet": "SpecFlow.xUnit, 3.9.74\n\nRecommendation:\n\nShould be replaced.\nRemove SpecFlow.xUnit, and replace with new package SpecFlow.xUnit, 3.9.74",
+            "label": "SpecFlow.xUnit 3.9.74",
+            "properties": {
+              "PackageId": "SpecFlow.xUnit",
+              "PackageVersion": "3.9.74",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0618553a-bbb9-434a-898a-fa01802504a2",
+          "ruleId": "NuGet.0005",
+          "projectPath": "SpecFlowProject\\SpecFlowProject.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "SpecFlowProject\\SpecFlowProject.csproj",
+            "snippet": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.4.1\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.4.1",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.4.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f8c95988-bb19-4d74-8a40-4230c63e23d9",
+          "ruleId": "Project.0002",
+          "projectPath": "SpecFlowProject\\SpecFlowProject.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net6.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net6.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "SpecFlowProject\\SpecFlowProject.csproj",
+            "snippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net6.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net6.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}

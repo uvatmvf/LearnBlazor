@@ -7,7 +7,7 @@ namespace SpecFlowProject.StepDefinitions
     [Binding]
     public class PersonNameStepDefinitions
     {
-        private string _name;
+        private string _name = string.Empty;
         private readonly PersonPage _personPage;
 
         public PersonNameStepDefinitions(PersonPage personPage) =>
@@ -29,9 +29,6 @@ namespace SpecFlowProject.StepDefinitions
         [Then(@"the person name changes")]
         public void ThenThePersonNameChanges() =>
             Assert.NotEmpty(_personPage.CheckName());
-        public void ThenThePersonNameChanges()
-        {
-            
-        }
+        // Removed duplicate empty method; assertion variant above is the intended check.
     }
 }

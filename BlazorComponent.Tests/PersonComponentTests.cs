@@ -8,8 +8,8 @@ namespace BlazorComponent.Tests
         [Fact]
         public void ComponentRendersAsExpected()
         {
-            using var context = new TestContext();
-            var classUnderTest = context.RenderComponent<PersonComponent>();
+            using var context = new BunitContext();
+            var classUnderTest = context.Render<PersonComponent>();
 
             Assert.NotEmpty(classUnderTest.Markup);
         }
